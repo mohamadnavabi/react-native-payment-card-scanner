@@ -1,0 +1,6 @@
+rootProject.name = 'PaymentCardScannerExample'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+
+include ':reactnativepaymentcardscanner'
+project(':reactnativepaymentcardscanner').projectDir = new File(rootProject.projectDir, '../../android')
