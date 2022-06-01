@@ -1,13 +1,18 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-payment-card-scanner';
+import PaymentCardScanner from 'react-native-payment-card-scanner';
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    PaymentCardScanner.scan(
+    "اسکن کارت",
+    "کارت بلوبانک خود را درون کادر قرار دهید"
+    ).then((result: any) => {
+      setResult(result.PAN);
+    });
   }, []);
 
   return (

@@ -7,10 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		5E555C0D2413F4C50049A1A2 /* PaymentCardScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* PaymentCardScanner.m */; };
-		F4FF95D7245B92E800C19C63 /*  PaymentCardScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  PaymentCardScanner.swift */; };
-
+		59F8FDA12847A831009EB4C7 /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD882847A831009EB4C7 /* OverlayViewController.swift */; };
+		59F8FDA22847A831009EB4C7 /* DemoBoxOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD892847A831009EB4C7 /* DemoBoxOverlayViewController.swift */; };
+		59F8FDA32847A831009EB4C7 /* PaymentCardScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD8A2847A831009EB4C7 /* PaymentCardScanner.swift */; };
+		59F8FDA42847A831009EB4C7 /* PaymentCardScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD8B2847A831009EB4C7 /* PaymentCardScanner.m */; };
+		59F8FDA52847A831009EB4C7 /* DemoScannerOverlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD8C2847A831009EB4C7 /* DemoScannerOverlayController.swift */; };
+		59F8FDA62847A831009EB4C7 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD902847A831009EB4C7 /* CameraViewController.swift */; };
+		59F8FDA72847A831009EB4C7 /* RecognizerCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD912847A831009EB4C7 /* RecognizerCameraViewController.swift */; };
+		59F8FDA82847A831009EB4C7 /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD932847A831009EB4C7 /* CardInfo.swift */; };
+		59F8FDA92847A831009EB4C7 /* BarcodeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD942847A831009EB4C7 /* BarcodeInfo.swift */; };
+		59F8FDAA2847A831009EB4C7 /* PaymentCardRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD962847A831009EB4C7 /* PaymentCardRecognizer.swift */; };
+		59F8FDAB2847A831009EB4C7 /* IdentityCardRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD972847A831009EB4C7 /* IdentityCardRecognizer.swift */; };
+		59F8FDAC2847A831009EB4C7 /* RectRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD982847A831009EB4C7 /* RectRecognizer.swift */; };
+		59F8FDAD2847A831009EB4C7 /* BarcodeRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD992847A831009EB4C7 /* BarcodeRecognizer.swift */; };
+		59F8FDAE2847A831009EB4C7 /* FaceImageRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD9A2847A831009EB4C7 /* FaceImageRecognizer.swift */; };
+		59F8FDAF2847A831009EB4C7 /* NationalCardSerialRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD9B2847A831009EB4C7 /* NationalCardSerialRecognizer.swift */; };
+		59F8FDB02847A831009EB4C7 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD9D2847A831009EB4C7 /* Image.swift */; };
+		59F8FDB12847A831009EB4C7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD9E2847A831009EB4C7 /* Extensions.swift */; };
+		59F8FDB22847A831009EB4C7 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FD9F2847A831009EB4C7 /* Protocols.swift */; };
+		59F8FDB32847A831009EB4C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8FDA02847A831009EB4C7 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,11 +42,26 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libPaymentCardScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPaymentCardScanner.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
-		B3E7B5891CC2AC0600A0062D /* PaymentCardScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentCardScanner.m; sourceTree = "<group>"; };
+		59F8FD882847A831009EB4C7 /* OverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
+		59F8FD892847A831009EB4C7 /* DemoBoxOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoBoxOverlayViewController.swift; sourceTree = "<group>"; };
+		59F8FD8A2847A831009EB4C7 /* PaymentCardScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCardScanner.swift; sourceTree = "<group>"; };
+		59F8FD8B2847A831009EB4C7 /* PaymentCardScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentCardScanner.m; sourceTree = "<group>"; };
+		59F8FD8C2847A831009EB4C7 /* DemoScannerOverlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoScannerOverlayController.swift; sourceTree = "<group>"; };
+		59F8FD902847A831009EB4C7 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		59F8FD912847A831009EB4C7 /* RecognizerCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognizerCameraViewController.swift; sourceTree = "<group>"; };
+		59F8FD932847A831009EB4C7 /* CardInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
+		59F8FD942847A831009EB4C7 /* BarcodeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeInfo.swift; sourceTree = "<group>"; };
+		59F8FD962847A831009EB4C7 /* PaymentCardRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCardRecognizer.swift; sourceTree = "<group>"; };
+		59F8FD972847A831009EB4C7 /* IdentityCardRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentityCardRecognizer.swift; sourceTree = "<group>"; };
+		59F8FD982847A831009EB4C7 /* RectRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectRecognizer.swift; sourceTree = "<group>"; };
+		59F8FD992847A831009EB4C7 /* BarcodeRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeRecognizer.swift; sourceTree = "<group>"; };
+		59F8FD9A2847A831009EB4C7 /* FaceImageRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceImageRecognizer.swift; sourceTree = "<group>"; };
+		59F8FD9B2847A831009EB4C7 /* NationalCardSerialRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationalCardSerialRecognizer.swift; sourceTree = "<group>"; };
+		59F8FD9D2847A831009EB4C7 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		59F8FD9E2847A831009EB4C7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		59F8FD9F2847A831009EB4C7 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		59F8FDA02847A831009EB4C7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* PaymentCardScanner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PaymentCardScanner-Bridging-Header.h"; sourceTree = "<group>"; };
-		F4FF95D6245B92E800C19C63 /* PaymentCardScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardScanner.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +86,76 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
-				F4FF95D6245B92E800C19C63 /* PaymentCardScanner.swift */,
-				B3E7B5891CC2AC0600A0062D /* PaymentCardScanner.m */,
+				59F8FD892847A831009EB4C7 /* DemoBoxOverlayViewController.swift */,
+				59F8FD8C2847A831009EB4C7 /* DemoScannerOverlayController.swift */,
+				59F8FD882847A831009EB4C7 /* OverlayViewController.swift */,
+				59F8FD8B2847A831009EB4C7 /* PaymentCardScanner.m */,
+				59F8FD8A2847A831009EB4C7 /* PaymentCardScanner.swift */,
+				59F8FD8D2847A831009EB4C7 /* Sources */,
+				59F8FDA02847A831009EB4C7 /* ViewController.swift */,
 				F4FF95D5245B92E700C19C63 /* PaymentCardScanner-Bridging-Header.h */,
-
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		59F8FD8D2847A831009EB4C7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				59F8FD8E2847A831009EB4C7 /* PaymentCardScanner */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		59F8FD8E2847A831009EB4C7 /* PaymentCardScanner */ = {
+			isa = PBXGroup;
+			children = (
+				59F8FD8F2847A831009EB4C7 /* ViewControllers */,
+				59F8FD922847A831009EB4C7 /* Structs */,
+				59F8FD952847A831009EB4C7 /* Recognizers */,
+				59F8FD9C2847A831009EB4C7 /* Base */,
+			);
+			path = PaymentCardScanner;
+			sourceTree = "<group>";
+		};
+		59F8FD8F2847A831009EB4C7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				59F8FD902847A831009EB4C7 /* CameraViewController.swift */,
+				59F8FD912847A831009EB4C7 /* RecognizerCameraViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		59F8FD922847A831009EB4C7 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				59F8FD932847A831009EB4C7 /* CardInfo.swift */,
+				59F8FD942847A831009EB4C7 /* BarcodeInfo.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		59F8FD952847A831009EB4C7 /* Recognizers */ = {
+			isa = PBXGroup;
+			children = (
+				59F8FD962847A831009EB4C7 /* PaymentCardRecognizer.swift */,
+				59F8FD972847A831009EB4C7 /* IdentityCardRecognizer.swift */,
+				59F8FD982847A831009EB4C7 /* RectRecognizer.swift */,
+				59F8FD992847A831009EB4C7 /* BarcodeRecognizer.swift */,
+				59F8FD9A2847A831009EB4C7 /* FaceImageRecognizer.swift */,
+				59F8FD9B2847A831009EB4C7 /* NationalCardSerialRecognizer.swift */,
+			);
+			path = Recognizers;
+			sourceTree = "<group>";
+		};
+		59F8FD9C2847A831009EB4C7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				59F8FD9D2847A831009EB4C7 /* Image.swift */,
+				59F8FD9E2847A831009EB4C7 /* Extensions.swift */,
+				59F8FD9F2847A831009EB4C7 /* Protocols.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,10 +215,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-				F4FF95D7245B92E800C19C63 /* PaymentCardScanner.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* PaymentCardScanner.m in Sources */,
-
+				59F8FDA22847A831009EB4C7 /* DemoBoxOverlayViewController.swift in Sources */,
+				59F8FDB32847A831009EB4C7 /* ViewController.swift in Sources */,
+				59F8FDAC2847A831009EB4C7 /* RectRecognizer.swift in Sources */,
+				59F8FDAB2847A831009EB4C7 /* IdentityCardRecognizer.swift in Sources */,
+				59F8FDB22847A831009EB4C7 /* Protocols.swift in Sources */,
+				59F8FDA72847A831009EB4C7 /* RecognizerCameraViewController.swift in Sources */,
+				59F8FDA42847A831009EB4C7 /* PaymentCardScanner.m in Sources */,
+				59F8FDA32847A831009EB4C7 /* PaymentCardScanner.swift in Sources */,
+				59F8FDAD2847A831009EB4C7 /* BarcodeRecognizer.swift in Sources */,
+				59F8FDAF2847A831009EB4C7 /* NationalCardSerialRecognizer.swift in Sources */,
+				59F8FDA52847A831009EB4C7 /* DemoScannerOverlayController.swift in Sources */,
+				59F8FDB02847A831009EB4C7 /* Image.swift in Sources */,
+				59F8FDAE2847A831009EB4C7 /* FaceImageRecognizer.swift in Sources */,
+				59F8FDA12847A831009EB4C7 /* OverlayViewController.swift in Sources */,
+				59F8FDAA2847A831009EB4C7 /* PaymentCardRecognizer.swift in Sources */,
+				59F8FDA62847A831009EB4C7 /* CameraViewController.swift in Sources */,
+				59F8FDB12847A831009EB4C7 /* Extensions.swift in Sources */,
+				59F8FDA92847A831009EB4C7 /* BarcodeInfo.swift in Sources */,
+				59F8FDA82847A831009EB4C7 /* CardInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,11 +346,9 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = PaymentCardScanner;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "PaymentCardScanner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Debug;
 		};
@@ -259,10 +365,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = PaymentCardScanner;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "PaymentCardScanner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Release;
 		};

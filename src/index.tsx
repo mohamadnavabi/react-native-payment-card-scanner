@@ -17,6 +17,8 @@ const PaymentCardScanner = NativeModules.PaymentCardScanner
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return PaymentCardScanner.multiply(a, b);
+export function scan(topText: string, bottomText: string): Promise<number> {
+  return PaymentCardScanner.scan(topText, bottomText);
 }
+
+export default PaymentCardScanner;
