@@ -15,7 +15,6 @@ import com.facebook.react.bridge.WritableNativeMap;
 import com.facebook.react.module.annotations.ReactModule;
 import com.facebook.react.views.text.ReactFontManager;
 import android.graphics.Typeface;
-import android.util.Log;
 
 import java.util.HashMap;
 import java.util.Map;
