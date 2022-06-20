@@ -15,10 +15,14 @@ class OverlayViewController: UIViewController {
     let borderRadius: CGFloat = 25.0
     var topText: NSString
     var bottomText: NSString
-
-    init(topText: NSString, bottomText: NSString) {
+    var topTextFont: NSString
+    var bottomTextFont: NSString
+    
+    init(topText: NSString, bottomText: NSString, topTextFont: NSString, bottomTextFont: NSString) {
         self.topText = topText
         self.bottomText = bottomText
+        self.topTextFont = topTextFont
+        self.bottomTextFont = bottomTextFont
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -85,13 +89,15 @@ class OverlayViewController: UIViewController {
         topTextLabel.textAlignment = .center
         topTextLabel.text = "\(topText)"
         topTextLabel.textColor = UIColor.white
+        topTextLabel.font = UIFont(name: "\(topTextFont)", size: 18.0)
         self.view.addSubview(topTextLabel)
         
-        let bottomTextLabel = UILabel(frame: CGRect(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2, width: 300, height: 20))
+        let bottomTextLabel = UILabel(frame: CGRect(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2, width: self.view.frame.size.width, height: 20))
         bottomTextLabel.center = CGPoint(x: self.view.center.x, y: frm.origin.y + frm.size.height + 30)
         bottomTextLabel.textAlignment = .center
         bottomTextLabel.text = "\(bottomText)"
         bottomTextLabel.textColor = UIColor.white
+        bottomTextLabel.font = UIFont(name: "\(bottomTextFont)", size: 16.0)
         self.view.addSubview(bottomTextLabel)
         
         backgroundView.layer.mask = maskLayer

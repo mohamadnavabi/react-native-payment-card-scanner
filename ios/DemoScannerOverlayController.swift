@@ -4,24 +4,24 @@ import UIKit
 import AVFoundation
 
 class DemoScannerNavigationController: UINavigationController {
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-		modalPresentationStyle = .fullScreen
-		
-		setupNavigationBar()
-	}
-	
-	private func setupNavigationBar() {
-		let appearance = UINavigationBarAppearance()
-		appearance.configureWithTransparentBackground()
-		
-		navigationBar.standardAppearance = appearance
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        modalPresentationStyle = .fullScreen
+        
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        
+        navigationBar.standardAppearance = appearance
         navigationBar.barStyle = .black
-		navigationBar.isTranslucent = true
-		navigationBar.tintColor = .white
-	}
+        navigationBar.isTranslucent = true
+        navigationBar.tintColor = .white
+    }
     
 /*
     func closeButton() -> UIBarButtonItem {

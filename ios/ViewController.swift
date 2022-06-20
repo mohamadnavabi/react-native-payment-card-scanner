@@ -4,11 +4,15 @@ import UIKit
 class ViewController:  UIViewController {
     var topText: NSString
     var bottomText: NSString
+    var topTextFont: NSString
+    var bottomTextFont: NSString
     var resolve: RCTPromiseResolveBlock? = nil
     
-    init(topText: NSString, bottomText: NSString, resolve: RCTPromiseResolveBlock?) {
+    init(topText: NSString, bottomText: NSString, topTextFont: NSString, bottomTextFont: NSString, resolve: RCTPromiseResolveBlock?) {
         self.topText = topText
         self.bottomText = bottomText
+        self.topTextFont = topTextFont
+        self.bottomTextFont = bottomTextFont
         self.resolve = resolve
 
         super.init(nibName: nil, bundle: nil)
@@ -29,7 +33,7 @@ class ViewController:  UIViewController {
     func presentCamera(for recognizers: [Recognizer]) {
         let extractionViewController = RecognizerCameraViewController(recognizers: recognizers)
         
-        let vc = OverlayViewController(topText: topText, bottomText: bottomText)
+        let vc = OverlayViewController(topText: topText, bottomText: bottomText, topTextFont: topTextFont, bottomTextFont: bottomTextFont)
         let nvc = DemoScannerNavigationController(rootViewController: extractionViewController)
 
         extractionViewController.addOverlayViewController(vc)

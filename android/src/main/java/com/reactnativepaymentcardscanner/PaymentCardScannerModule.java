@@ -13,6 +13,9 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
 import com.facebook.react.module.annotations.ReactModule;
+import com.facebook.react.views.text.ReactFontManager;
+import android.graphics.Typeface;
+import android.util.Log;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,7 +43,7 @@ public class PaymentCardScannerModule extends ReactContextBaseJavaModule impleme
   }
 
   @ReactMethod
-  public void scan(String topText, String bottomText, Promise promise) {
+  public void scan(String topText, String bottomText, String topTextFontFamily, String bottomTextFontFamily, Promise promise) {
     mPromise = promise;
     Activity currentActivity  = getCurrentActivity();
 
@@ -50,35 +53,14 @@ public class PaymentCardScannerModule extends ReactContextBaseJavaModule impleme
     }
 
     try {
-    ScanActivity.start(currentActivity, topText, bottomText);
-  } catch (Exception e) {
-      promise.reject("E_FAILED_TO_SHOW_PICKER", e);
-      mPromise = null;
+      Typeface topTextTypeface = ReactFontManager.getInstance().getTypeface(topTextFontFamily, 0, context.getAssets());
+      Typeface bottomTextTypeface = ReactFontManager.getInstance().getTypeface(bottomTextFontFamily, 0, context.getAssets());
+      ScanActivity.start(currentActivity, topText, bottomText, topTextTypeface, bottomTextTypeface);
+    } catch (Exception e) {
+        promise.reject("E_FAILED_TO_SHOW_PICKER", e);
+        mPromise = null;
+    }
   }
-  }
-
-
-//  @Override
-//  public void onActivityResult(int requestCode, int resultCode, Intent data) {
-////		super.onActivityResult(requestCode, resultCode, data);
-//
-//    if (ScanActivity.isScanResult(requestCode)) {
-//      if (resultCode == Activity.RESULT_OK && data != null) {
-//        DebitCard scanResult = ScanActivity.debitCardFromResult(data);
-//
-//        Log.d("cardNumber", scanResult.number);
-//        Log.d("cardExpiryMonth", String.valueOf(scanResult.expiryMonth));
-//        Log.d("cardExpiryYear", String.valueOf(scanResult.expiryYear));
-//      } else if (resultCode == ScanActivity.RESULT_CANCELED) {
-//        boolean fatalError = data.getBooleanExtra(ScanActivity.RESULT_FATAL_ERROR, false);
-//        if (fatalError) {
-//          Log.d("TAG", "fatal error");
-//        } else {
-//          Log.d("TAG", "The user pressed the back button");
-//        }
-//      }
-//    }
-//  }
 
   @ReactMethod
   public WritableMap dataExtractor(Intent data) {

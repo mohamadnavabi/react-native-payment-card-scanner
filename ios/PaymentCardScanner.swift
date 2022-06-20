@@ -1,10 +1,10 @@
 @objc(PaymentCardScanner)
 class PaymentCardScanner: NSObject {
 
-    @objc(scan:withBottomText:withResolver:withRejecter:)
-    func scan(topText: NSString, bottomText: NSString, resolve: @escaping RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) -> Void {
+    @objc(scan:withBottomText:withTopTextFont:withBottomTextFont:withResolver:withRejecter:)
+    func scan(topText: NSString, bottomText: NSString, topTextFont: NSString, bottomTextFont: NSString, resolve: @escaping RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) -> Void {
         let modelVC: UIViewController
-        modelVC = ViewController(topText: topText, bottomText: bottomText, resolve: resolve)
+        modelVC = ViewController(topText: topText, bottomText: bottomText, topTextFont: topTextFont, bottomTextFont: bottomTextFont, resolve: resolve)
 
         DispatchQueue.main.async {
           let navController = UINavigationController(rootViewController: modelVC)
