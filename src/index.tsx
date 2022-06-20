@@ -17,8 +17,8 @@ const PaymentCardScanner = NativeModules.PaymentCardScanner
       }
     );
 
-export function scan(topText: string, bottomText: string): Promise<number> {
-  return PaymentCardScanner.scan(topText, bottomText);
+export function scan(topText: string, bottomText: string, topTextFont: string, bottomTextFont: string): Promise<number> {
+  return PaymentCardScanner.scan(topText, bottomText, topTextFont, bottomTextFont);
 }
 
 export default PaymentCardScanner;

@@ -17,7 +17,9 @@ import PaymentCardScanner from "react-native-payment-card-scanner";
 
 PaymentCardScanner.scan(
     "اسکن کارت",
-    "کارت بلوبانک خود را درون کادر قرار دهید"
+    "پشت بلوکارت فرد منتخب را مقابل دوربین قرار دهید",
+    "topTextFontFamilyName",
+    "bottomTextFontFamilyName"
 ).then((result: any) => {
     console.log(result);
 }).catch((error: any) => {});

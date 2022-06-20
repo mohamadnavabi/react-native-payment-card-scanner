@@ -8,8 +8,10 @@ export default function App() {
 
   React.useEffect(() => {
     PaymentCardScanner.scan(
-    "اسکن کارت",
-    "کارت بلوبانک خود را درون کادر قرار دهید"
+      "اسکن کارت",
+      "پشت بلوکارت فرد منتخب را مقابل دوربین قرار دهید",
+      "topTextFontFamilyName",
+      "bottomTextFontFamilyName"
     ).then((result: any) => {
       setResult(result.PAN);
     });
