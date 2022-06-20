@@ -6,9 +6,9 @@ class ViewController:  UIViewController {
     var bottomText: NSString
     var topTextFont: NSString
     var bottomTextFont: NSString
-    var resolve: RCTPromiseResolveBlock? = nil
+    var resolve: RCTPromiseResolveBlock
     
-    init(topText: NSString, bottomText: NSString, topTextFont: NSString, bottomTextFont: NSString, resolve: RCTPromiseResolveBlock?) {
+    init(topText: NSString, bottomText: NSString, topTextFont: NSString, bottomTextFont: NSString, resolve: @escaping RCTPromiseResolveBlock) {
         self.topText = topText
         self.bottomText = bottomText
         self.topTextFont = topTextFont
@@ -63,7 +63,7 @@ extension ViewController {
         let data = ["PAN": cardInfo.pan, "CVV2": cardInfo.cvv2, "EXP": cardInfo.exp, "IBAN": cardInfo.iban]
 
         if resolve != nil {
-            resolve!(data)
+            resolve(data)
             self.dismissCamera()
         }
     }
