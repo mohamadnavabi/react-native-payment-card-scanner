@@ -1,5 +1,7 @@
+import UIKit
 @objc(PaymentCardScanner)
 class PaymentCardScanner: NSObject {
+    public static var navController: UIViewController!
 
     @objc(scan:withBottomText:withTopTextFont:withBottomTextFont:withResolver:withRejecter:)
     func scan(topText: NSString, bottomText: NSString, topTextFont: NSString, bottomTextFont: NSString, resolve: @escaping RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) -> Void {
@@ -7,10 +9,10 @@ class PaymentCardScanner: NSObject {
         modelVC = ViewController(topText: topText, bottomText: bottomText, topTextFont: topTextFont, bottomTextFont: bottomTextFont, resolve: resolve)
 
         DispatchQueue.main.async {
-          let navController = UINavigationController(rootViewController: modelVC)
-          navController.modalPresentationStyle = .fullScreen
+            PaymentCardScanner.navController = UINavigationController(rootViewController: modelVC)
+            PaymentCardScanner.navController.modalPresentationStyle = .fullScreen
           let topController = UIApplication.topMostViewController()
-          topController?.present(navController, animated: true, completion: nil)
+            topController?.present(PaymentCardScanner.navController, animated: true, completion: nil)
         }
     }
 }

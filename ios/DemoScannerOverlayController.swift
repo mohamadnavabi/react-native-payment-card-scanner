@@ -1,5 +1,3 @@
-//
-
 import UIKit
 import AVFoundation
 
@@ -45,10 +43,12 @@ class DemoScannerNavigationController: UINavigationController {
         return barButtonItem
     }
     
-    @objc func closeTapped() {
+    @objc
+    func closeTapped() {
         DispatchQueue.main.async {
-         let topController = UIApplication.topMostViewController()
-         topController?.dismiss(animated: true, completion: nil)
+            let topController = UIApplication.topMostViewController()
+            topController?.dismiss(animated: false)
+            PaymentCardScanner.navController.dismiss(animated: true)
         }
     }
 }

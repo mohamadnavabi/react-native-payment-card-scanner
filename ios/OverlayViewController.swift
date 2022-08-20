@@ -2,7 +2,7 @@
 //  OverlayViewController.swift
 //  PaymentCardScanner
 //
-//  Created by Mohammad on 3/8/1401 AP.
+//  Created by Mohammad Navabi on 3/8/1401 AP.
 //  Copyright © 1401 AP Facebook. All rights reserved.
 //
 
