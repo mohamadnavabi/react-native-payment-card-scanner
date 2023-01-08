@@ -79,16 +79,21 @@ public class PaymentCardScannerModule extends ReactContextBaseJavaModule impleme
 
   @Override
   public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
-    if (ScanActivity.isScanResult(requestCode)) {
-      if (resultCode == Activity.RESULT_OK && data != null) {
-        mPromise.resolve(dataExtractor(data));
-      } else if (resultCode == ScanActivity.RESULT_CANCELED) {
-        boolean fatalError = data.getBooleanExtra(ScanActivity.RESULT_FATAL_ERROR, false);
-        if (fatalError) {
-          mPromise.reject("fatal error");
-        } else {
-          mPromise.reject("The user pressed the back button");
+    try {
+      if (ScanActivity.isScanResult(requestCode)) {
+        if (resultCode == Activity.RESULT_OK && data != null) {
+          mPromise.resolve(dataExtractor(data));
+        } else if (resultCode == ScanActivity.RESULT_CANCELED) {
+          boolean fatalError = data.getBooleanExtra(ScanActivity.RESULT_FATAL_ERROR, false);
+          if (fatalError) {
+            mPromise.reject("fatal error");
+          } else {
+            mPromise.reject("The user pressed the back button");
+          }
         }
+      } catch (Exception e) {
+        promise.reject("E_FAILED_TO_SHOW_PICKER", e);
+        mPromise = null;
       }
     }
 
