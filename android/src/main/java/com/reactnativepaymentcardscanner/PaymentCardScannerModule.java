@@ -86,15 +86,17 @@ public class PaymentCardScannerModule extends ReactContextBaseJavaModule impleme
         } else if (resultCode == ScanActivity.RESULT_CANCELED) {
           boolean fatalError = data.getBooleanExtra(ScanActivity.RESULT_FATAL_ERROR, false);
           if (fatalError) {
-            mPromise.reject("fatal error");
+            mPromise.reject("Fatal error");
           } else {
             mPromise.reject("The user pressed the back button");
           }
         }
-      } catch (Exception e) {
-        promise.reject("E_FAILED_TO_SHOW_PICKER", e);
-        mPromise = null;
+      } else {
+        mPromise.reject("Result error");
       }
+    } catch (Exception e) {
+      mPromise.reject("E_FAILED_TO_SHOW_PICKER", e);
+      mPromise = null;
     }
 
     mPromise = null;
