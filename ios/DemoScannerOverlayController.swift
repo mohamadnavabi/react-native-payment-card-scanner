@@ -1,6 +1,7 @@
 import UIKit
 import AVFoundation
 
+@available(iOS 13.0, *)
 class DemoScannerNavigationController: UINavigationController {
     
     override func viewDidLoad() {
