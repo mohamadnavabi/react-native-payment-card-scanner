@@ -49,7 +49,7 @@ class DemoScannerNavigationController: UINavigationController {
         DispatchQueue.main.async {
             let topController = UIApplication.topMostViewController()
             topController?.dismiss(animated: false)
-            PaymentCardScanner.navController.dismiss(animated: true)
+            PaymentCardScanner.navController.dismiss(animated: false, completion: nil)
         }
     }
 }
