@@ -38,7 +38,7 @@ class ViewController:  UIViewController {
 
         extractionViewController.addOverlayViewController(vc)
         extractionViewController.modalPresentationStyle = .overFullScreen
-        extractionViewController.navigationItem.leftBarButtonItem = nvc.closeButton()
+        extractionViewController.navigationItem.rightBarButtonItem = nvc.closeButton()
         
         cameraViewController = extractionViewController
         self.present(nvc, animated: false, completion: nil)

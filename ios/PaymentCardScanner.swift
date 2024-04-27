@@ -1,4 +1,5 @@
 import UIKit
+
 @objc(PaymentCardScanner)
 class PaymentCardScanner: NSObject {
     public static var navController: UIViewController!

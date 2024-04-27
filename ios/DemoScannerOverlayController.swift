@@ -21,18 +21,6 @@ class DemoScannerNavigationController: UINavigationController {
         navigationBar.isTranslucent = true
         navigationBar.tintColor = .white
     }
-    
-/*
-    func closeButton() -> UIBarButtonItem {
-        let icon = UIButton()
-        icon.setImage(UIImage(named: "back"), for: .normal)
-        icon.contentVerticalAlignment = .fill
-        icon.contentHorizontalAlignment = .fill
-        icon.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
-
-        return UIBarButtonItem(customView: icon)
-    }
-*/
 
     func closeButton() -> UIBarButtonItem {
         let barButtonItem = UIBarButtonItem(title: "❯", style: .plain, target: self, action: #selector(closeTapped))
