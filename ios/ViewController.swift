@@ -46,7 +46,7 @@ class ViewController:  UIViewController {
 
     func dismissCamera() {
         cameraViewController?.captureState = .stopped
-        dismiss(animated: false, completion: nil)
+        UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: false, completion: nil)
     }
 }
 
