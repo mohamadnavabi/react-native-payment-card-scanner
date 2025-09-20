@@ -1,19 +1,21 @@
-import * as React from 'react';
+import React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import PaymentCardScanner from 'react-native-payment-card-scanner';
+import { StyleSheet, Text, View } from 'react-native';
+import PaymentCardScanner, {
+  ScanResult,
+} from 'react-native-payment-card-scanner';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<string | undefined>();
 
   React.useEffect(() => {
     PaymentCardScanner.scan(
-      "اسکن کارت",
-      "پشت بلوکارت فرد منتخب را مقابل دوربین قرار دهید",
-      "topTextFontFamilyName",
-      "bottomTextFontFamilyName"
-    ).then((result: any) => {
-      setResult(result.PAN);
+      'اسکن کارت',
+      'پشت بلوکارت فرد منتخب را مقابل دوربین قرار دهید',
+      'topTextFontFamilyName',
+      'bottomTextFontFamilyName'
+    ).then((res: ScanResult) => {
+      setResult(res.PAN);
     });
   }, []);
 
