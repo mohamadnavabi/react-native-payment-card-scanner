@@ -1,6 +1,6 @@
 {
   "name": "react-native-payment-card-scanner",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Payment card scanner for react native both android and ios",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
