@@ -11,18 +11,17 @@ npm install react-native-payment-card-scanner
 ## Usage
 
 ```js
-import PaymentCardScanner from "react-native-payment-card-scanner";
+import PaymentCardScanner from 'react-native-payment-card-scanner';
 
 // ...
-
 PaymentCardScanner.scan(
-    "اسکن کارت",
-    "پشت بلوکارت فرد منتخب را مقابل دوربین قرار دهید",
-    "topTextFontFamilyName",
-    "bottomTextFontFamilyName"
-).then((result: any) => {
-    console.log(result);
-}).catch((error: any) => {});
+  'اسکن کارت',
+  'پشت بلوکارت فرد منتخب را مقابل دوربین قرار دهید',
+  'topTextFontFamilyName',
+  'bottomTextFontFamilyName'
+).then((res: ScanResult) => {
+  setResult(res.PAN);
+});
 ```
 
 ## Contributing

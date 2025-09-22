@@ -51,10 +51,11 @@ repositories {
     google()
     mavenCentral()
     jcenter()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation "com.github.mohamadnavabi:payment-card-scanner:1.2.1"
+    implementation "com.github.mohamadnavabi:payment-card-scanner:1.1.0"
 }
