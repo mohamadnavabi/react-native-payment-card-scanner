@@ -1,7 +1,7 @@
 {
   "name": "react-native-payment-card-scanner",
-  "version": "0.3.4",
-  "description": "Payment card scanner for react native both android and ios",
+  "version": "0.3.5",
+  "description": "Iranian Bank Card Scanner for React Native - Scan Iranian debit/credit cards with OCR technology. Supports Android & iOS with Persian/Farsi text display.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -34,7 +34,28 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "iranian",
+    "iran",
+    "bank-card",
+    "debit-card",
+    "credit-card",
+    "card-scanner",
+    "ocr",
+    "persian",
+    "farsi",
+    "payment",
+    "banking",
+    "card-reader",
+    "mobile-scanner",
+    "iranian-banking",
+    "shaparak",
+    "bank-melli",
+    "bank-tejarat",
+    "bank-saderat",
+    "bank-mellat",
+    "card-detection",
+    "payment-processing"
   ],
   "repository": "https://github.com/mohamadnavabi/react-native-payment-card-scanner",
   "author": "Mohammad Navabi <navabifar@gmail.com> (https://mohammadnavabi.ir)",
@@ -43,6 +64,9 @@
     "url": "https://github.com/mohamadnavabi/react-native-payment-card-scanner/issues"
   },
   "homepage": "https://github.com/mohamadnavabi/react-native-payment-card-scanner#readme",
+  "engines": {
+    "node": ">=12"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

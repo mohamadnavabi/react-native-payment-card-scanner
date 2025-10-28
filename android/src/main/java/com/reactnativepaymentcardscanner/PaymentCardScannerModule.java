@@ -22,9 +22,8 @@ import java.util.Map;
 import ir.mohammadnavabi.paymentcardscanner.DebitCard;
 import ir.mohammadnavabi.paymentcardscanner.ScanActivity;
 
-
 @ReactModule(name = PaymentCardScannerModule.NAME)
-public class PaymentCardScannerModule extends ReactContextBaseJavaModule implements ActivityEventListener  {
+public class PaymentCardScannerModule extends ReactContextBaseJavaModule implements ActivityEventListener {
   public static final String NAME = "PaymentCardScanner";
   ReactApplicationContext context = getReactApplicationContext();
   Promise mPromise = null;
@@ -42,9 +41,10 @@ public class PaymentCardScannerModule extends ReactContextBaseJavaModule impleme
   }
 
   @ReactMethod
-  public void scan(String topText, String bottomText, String topTextFontFamily, String bottomTextFontFamily, Promise promise) {
+  public void scan(String topText, String bottomText, String topTextFontFamily, String bottomTextFontFamily,
+      Promise promise) {
     mPromise = promise;
-    Activity currentActivity  = getCurrentActivity();
+    Activity currentActivity = getCurrentActivity();
 
     if (currentActivity == null) {
       promise.reject("E_ACTIVITY_DOES_NOT_EXIST", "Activity doesn't exist");
@@ -53,15 +53,15 @@ public class PaymentCardScannerModule extends ReactContextBaseJavaModule impleme
 
     try {
       Typeface topTextTypeface = ReactFontManager.getInstance().getTypeface(topTextFontFamily, 0, context.getAssets());
-      Typeface bottomTextTypeface = ReactFontManager.getInstance().getTypeface(bottomTextFontFamily, 0, context.getAssets());
+      Typeface bottomTextTypeface = ReactFontManager.getInstance().getTypeface(bottomTextFontFamily, 0,
+          context.getAssets());
       ScanActivity.start(currentActivity, topText, bottomText, topTextTypeface, bottomTextTypeface);
     } catch (Exception e) {
-        promise.reject("E_FAILED_TO_SHOW_PICKER", e);
-        mPromise = null;
+      promise.reject("E_FAILED_TO_SHOW_PICKER", e);
+      mPromise = null;
     }
   }
 
-  @ReactMethod
   public WritableMap dataExtractor(Intent data) {
     DebitCard scanResult = ScanActivity.debitCardFromResult(data);
 
@@ -105,5 +105,6 @@ public class PaymentCardScannerModule extends ReactContextBaseJavaModule impleme
   }
 
   @Override
-  public void onNewIntent(Intent intent) { }
+  public void onNewIntent(Intent intent) {
+  }
 }
